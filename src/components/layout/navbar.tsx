@@ -127,7 +127,7 @@ export function Navbar() {
               href="/reservation"
               className={cn(
                 buttonVariants(),
-                "rounded-none px-8 py-6 text-sm uppercase tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+                "rounded-2xl px-8 py-6 text-sm uppercase tracking-widest bg-primary text-primary-foreground ring-2 ring-primary/20 hover:ring-primary/50 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 overflow-hidden relative before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent hover:before:translate-x-full before:transition-transform before:duration-700"
               )}
             >
               {t.nav.bookTable}
@@ -196,7 +196,7 @@ export function Navbar() {
             <div className="pt-4 pb-2">
               <Link
                 href="/reservation"
-                className={cn(buttonVariants(), "w-full rounded-none py-6 text-sm uppercase tracking-widest bg-primary text-primary-foreground")}
+                className={cn(buttonVariants(), "w-full rounded-2xl py-6 text-sm uppercase tracking-widest bg-primary text-primary-foreground hover:brightness-110 transition-all duration-300")}
               >
                 {t.nav.bookTable}
               </Link>

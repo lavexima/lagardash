@@ -41,12 +41,12 @@ export function ReservationCTA() {
 
           <p className="text-white/70 font-light leading-relaxed text-lg mb-12 max-w-xl mx-auto">{t.reservationCTA.subtitle}</p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/reservation" className={cn(buttonVariants({ size: "lg" }), "rounded-none px-10 py-7 text-sm uppercase tracking-widest bg-primary text-primary-foreground hover:bg-white hover:text-black transition-all duration-500 gap-2")}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <Link href="/reservation" className={cn(buttonVariants({ size: "lg" }), "rounded-2xl px-10 py-7 text-sm uppercase tracking-widest bg-primary text-primary-foreground ring-2 ring-primary/30 ring-offset-2 ring-offset-transparent hover:ring-primary/60 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-500 gap-3")}>
               <CalendarDays className="h-4 w-4" />
               {t.reservationCTA.cta_book}
             </Link>
-            <a href="tel:+905551234567" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-none px-10 py-7 text-sm uppercase tracking-widest border-white/30 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-500 bg-transparent gap-2")}>
+            <a href="tel:+905551234567" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "group rounded-2xl px-10 py-7 text-sm uppercase tracking-widest border-white/30 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-500 bg-white/5 backdrop-blur-md gap-3")}>
               <Phone className="h-4 w-4" />
               {t.reservationCTA.cta_phone}
             </a>

@@ -52,12 +52,14 @@ export function HeroSection() {
           {t.hero.subtitle}
         </motion.p>
 
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/reservation" className={cn(buttonVariants({ size: "lg" }), "rounded-none px-10 py-7 text-sm uppercase tracking-widest bg-primary text-primary-foreground hover:bg-white hover:text-black transition-all duration-500 min-w-[200px]")}>
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }} className="flex flex-col sm:flex-row items-center justify-center gap-5">
+          <Link href="/reservation" className={cn(buttonVariants({ size: "lg" }), "rounded-2xl px-10 py-7 text-sm uppercase tracking-widest bg-primary text-primary-foreground ring-2 ring-primary/30 ring-offset-2 ring-offset-transparent hover:ring-primary/60 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-500 min-w-[220px]")}
+          >
             {t.hero.cta_reserve}
           </Link>
-          <Link href="/menu" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-none px-10 py-7 text-sm uppercase tracking-widest border-white/30 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-500 bg-transparent min-w-[200px]")}>
+          <Link href="/menu" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "group rounded-2xl px-10 py-7 text-sm uppercase tracking-widest border-white/30 text-white hover:bg-white/10 hover:border-white/60 hover:shadow-lg hover:shadow-white/10 transition-all duration-500 bg-white/5 backdrop-blur-md min-w-[220px] gap-2")}>
             {t.hero.cta_menu}
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </motion.div>
       </motion.div>
