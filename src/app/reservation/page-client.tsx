@@ -57,14 +57,14 @@ export default function ReservationPageClient() {
                     <div className="space-y-3">
                       <label className="text-sm uppercase tracking-widest text-muted-foreground">{r.dateLabel}</label>
                       <Popover>
-                        <PopoverTrigger asChild>
+                        <PopoverTrigger render={
                           <Button variant="outline" className={cn("w-full justify-start text-left font-normal bg-background/50 border-border/50 h-12 rounded-none", !date && "text-muted-foreground")}>
                             <CalendarDays className="mr-2 h-4 w-4 text-primary" />
                             {date ? format(date, "PPP", { locale: dateLocale }) : <span>{r.datePlaceholder}</span>}
                           </Button>
-                        </PopoverTrigger>
+                        } />
                         <PopoverContent className="w-auto p-0" align="start">
-                          <Calendar mode="single" selected={date} onSelect={setDate} initialFocus disabled={(date) => date < new Date() || date < new Date("1900-01-01")} />
+                          <Calendar mode="single" selected={date} onSelect={setDate} disabled={(date) => date < new Date() || date < new Date("1900-01-01")} />
                         </PopoverContent>
                       </Popover>
                     </div>

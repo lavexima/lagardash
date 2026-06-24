@@ -89,15 +89,11 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             {/* Language Switcher */}
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className={cn("rounded-full gap-1", !isScrolled && "text-white hover:text-primary hover:bg-white/10")}
-                >
-                  <Globe className="h-4 w-4" />
-                  <span className="text-[10px] uppercase font-bold">{locale}</span>
-                </Button>
+              <DropdownMenuTrigger
+                className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full gap-1 outline-none", !isScrolled && "text-white hover:text-primary hover:bg-white/10")}
+              >
+                <Globe className="h-4 w-4" />
+                <span className="text-[10px] uppercase font-bold">{locale}</span>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="min-w-[160px]">
                 <DropdownMenuItem

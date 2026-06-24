@@ -447,7 +447,7 @@ export const translations = {
       whatsapp: "Chat on WhatsApp",
     },
   },
-} as const
+}
 
 export type Locale = keyof typeof translations
 export type TranslationKeys = typeof translations.tr
